@@ -1,0 +1,16 @@
+{
+    "Products": [
+        {
+            "customer": "BP1720",
+            "customerName": "BP1720-Florin USA Inc.",
+            "email": "Tennessee",
+            "mobile": "Clarksville"
+        },
+        {
+            "customer": "BP1940",
+            "customerName": "BP1940-Florin USA Inc.",
+            "email": "Tennessee",
+            "mobile": "Clarksville"
+        }
+    ]
+}

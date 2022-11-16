@@ -1,0 +1,186 @@
+<mvc:View controllerName="sap.ui.task.controller.HeaderBlock" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m">
+    <HBox>
+        <items>
+            <VBox width="100%">
+
+
+                <VBox alignItems="Start">
+                    <items>
+
+                        <FlexBox>
+                            <VBox class="sapUiSmallMarginEnd">
+                                <ComboBox width="15rem" placeholder="Order type"
+                                    items="{
+                                        path : 'helper>/helpList',
+                                        sorter: { path: 'customer' }
+                                        
+          
+                
+            }">
+                                    <core:Item key="{customer}" text="{helper>customerName}" />
+                                </ComboBox>
+                            </VBox>
+
+
+                            <Input id="customer" value="Customer(customer code)" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="input1" width="20rem" class="sapUiSmallMarginBottom" />
+                            <DatePicker class="sapUiSmallMarginBegin" value="Req Delivery Date" width="12rem"></DatePicker>
+                        </FlexBox>
+                        <FlexBox class="sapUiSmallMarginBottom">
+
+                            <Input id="VKORG" value="VKORG" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="input2" width="20rem" class="sapUiSmallMarginEnd" />
+
+
+                            <Input id="VTWEG" value="VTWEG" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="input3" width="15rem" class="sapUiSmallMarginEnd" />
+                            <ComboBox id="SPRAT" width="12rem" placeholder="SPRAT"
+                                items="{
+                                path : 'helper>/helpList',
+                                sorter: { path: 'mobile' }
+                                
+  
+        
+    }">
+                                <core:Item key="{mobile}" text="{helper>mobile}" />
+                            </ComboBox>
+
+
+                        </FlexBox>
+                        <FlexBox class="sapUiLargeMarginBegin">
+
+                            <Input id="purchOrd" placeholder="Purch order no." width="17rem" class="sapUiSmallMarginEnd" />
+                            <ComboBox id="PYMNT" width="20rem" placeholder="PYMNT Conditions"
+                                items="{
+                                path : 'helper>/helpList',
+                                sorter: { path: 'email' }
+                                
+  
+        
+    }">
+                                <core:Item key="{email}" text="{helper>email}" />
+                            </ComboBox>
+
+
+                        </FlexBox>
+                    </items>
+                </VBox>
+
+            </VBox>
+
+            <VBox width="100%">
+                <VBox justifyContent="SpaceBetween">
+
+
+                    <items>
+
+                        <HBox>
+                            <items>
+                                <FlexBox id="_IDGenVerticalLayout2" class=" sapUiTinyMarginBottom sapUiTinyMarginEnd" direction="Column" width="40%">
+
+                                    <ComboBox width="100%" id="Ship_to" placeholder="Ship to"
+                                        items="{
+                                        path : 'helper>/helpList',
+                                        sorter: { path: 'email' }
+                                        
+          
+                
+            }">
+                                        <core:Item key="{email}" text="{helper>email}" />
+                                    </ComboBox>
+                                </FlexBox>
+                                <FlexBox id="_IDGenFlexBox1" direction="Column" width="60%">
+
+                                    <Input id="cusName" width="100%" placeholder="NAME1_WE+NAME2_WE" />
+                                </FlexBox>
+                            </items>
+                        </HBox>
+                    </items>
+
+                    <Input id="STRAS_WE" placeholder="STRAW_WE" class="sapUiTinyMarginBottom" />
+                    <items>
+
+                        <HBox>
+                            <items>
+                                <FlexBox id="3rd_row" class=" sapUiTinyMarginBottom sapUiTinyMarginEnd" direction="Column" width="40%">
+                                    <Input id="PSLIZ_WE" width="100%" placeholder="PSLIZ_WE" />
+                                </FlexBox>
+                                <FlexBox id="_IDGenFlexBox2" direction="Column" width="60%">
+
+                                    <Input id="OTROI_WE" width="100%" placeholder="OTROI_WE" />
+                                </FlexBox>
+                            </items>
+                        </HBox>
+                    </items>
+                    <items>
+
+                        <HBox>
+                            <items>
+                                <FlexBox id="4th_row" class=" sapUiTinyMarginBottom sapUiTinyMarginEnd" direction="Column" width="50%">
+                                    <Input id="REGIO_WE" width="100%" placeholder="REGIO_WE" />
+                                </FlexBox>
+                                <FlexBox id="_IDGenFlexBox3" direction="Column" width="50%">
+
+                                    <Input id="LAND1_WE" width="100%" placeholder="LAND1" />
+                                </FlexBox>
+                            </items>
+                        </HBox>
+                    </items>
+                    <items>
+
+                        <HBox>
+                            <items>
+                                <FlexBox id="5th_row" class=" sapUiTinyMarginBottom sapUiSmallMarginTop sapUiTinyMarginEnd" direction="Column" width="40%">
+                                    <ComboBox width="100%" id="Carrier" placeholder="Carrier(Code)"
+                                        items="{
+                                        path : 'helper>/helpList',
+                                        sorter: { path: 'customer' }
+                                        
+          
+                
+            }">
+                                        <core:Item key="{customer}" text="{helper>customer}" />
+                                    </ComboBox>
+                                </FlexBox>
+                                <FlexBox id="_IDGenFlexBox5" class="sapUiSmallMarginTop" direction="Column" width="60%">
+
+                                    <Input id="NAME" width="100%" placeholder="NAME1_SP + NAME2_SP" />
+                                </FlexBox>
+                            </items>
+                        </HBox>
+                    </items>
+                    <Input id="STRAS_SP" placeholder="STRAS_SP" class="sapUiTinyMarginBottom" />
+                    <items>
+
+                        <HBox>
+                            <items>
+                                <FlexBox id="6th_row" class=" sapUiTinyMarginBottom sapUiTinyMarginEnd" direction="Column" width="40%">
+                                    <Input id="PSTLZ_SP" width="100%" placeholder="PSTLZ_SP" />
+                                </FlexBox>
+                                <FlexBox id="_IDGenFlexBox6" direction="Column" width="60%">
+
+                                    <Input id="ORT01_SP" width="100%" placeholder="ORT01_SP" />
+                                </FlexBox>
+                            </items>
+                        </HBox>
+                    </items>
+                    <items>
+
+                        <HBox>
+                            <items>
+                                <FlexBox id="7th_row" class=" sapUiTinyMarginBottom sapUiTinyMarginEnd" direction="Column" width="40%">
+                                    <Input id="REGIO_SP" width="100%" placeholder="REGIO_SP" />
+                                </FlexBox>
+                                <FlexBox id="_IDGenFlexBox7" direction="Column" width="60%">
+
+                                    <Input id="LAND1_SP" width="100%" placeholder="LAND1_SP" />
+                                </FlexBox>
+                            </items>
+                        </HBox>
+                    </items>
+
+
+                </VBox>
+
+            </VBox>
+        </items>
+    </HBox>
+
+</mvc:View>

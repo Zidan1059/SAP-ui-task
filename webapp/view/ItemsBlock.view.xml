@@ -1,0 +1,138 @@
+<mvc:View controllerName="sap.ui.task.controller.ItemsBlock" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns="sap.ui.table"
+>
+    <Table
+        id="table"
+        rows="{oModel>/}"
+        ariaLabelledBy="title"
+        rowActionCount="1"
+    >
+
+        <columns>
+            <Column width="9rem">
+                <m:Label text="Product" />
+                <template>
+                    <m:ComboBox id="Prod"
+                        items="{
+                        path : 'helper>/helpList'
+                    }"
+                        selectionChange=".testHandler"
+                        selectedKey="{oModel>product}"
+                    >
+                        <core:Item key="{helper>mobile}" text="{helper>mobile}" />
+                    </m:ComboBox>
+
+                </template>
+            </Column>
+            <Column width="7rem">
+                <m:Label text="QTY" />
+                <template>
+                    <m:Input id="QTY" value="{oModel>quantity}" />
+                </template>
+            </Column>
+            <Column width="8rem">
+                <m:Label text="UoM" />
+                <template>
+                    <m:Input id="UoM" value="{oModel>name}" />
+                </template>
+            </Column>
+            <Column width="10rem">
+                <m:Label text="Price List" />
+                <template>
+                    <m:Input id="Price_List" />
+                </template>
+            </Column>
+            <Column width="7rem">
+                <m:Label text="CURR" />
+                <template>
+                    <m:Input id="CURR" />
+                </template>
+            </Column>
+            <Column width="8rem">
+                <m:Label text="Item Category" />
+                <template>
+                    <m:ComboBox id="Item_category"
+                        items="{
+                        path : 'helper>/helpList',
+                        sorter: { path: 'email' }
+                        
+
+
+}">
+                        <core:Item key="{email}" text="{helper>email}" />
+
+                    </m:ComboBox>
+
+                </template>
+            </Column>
+            <Column width="7rem">
+                <m:Label text="Batch" />
+                <template>
+                    <m:ComboBox id="Batch"
+                        items="{
+                        path : 'helper>/helpList',
+                        sorter: { path: 'customer' }
+}">
+                        <core:Item key="{customer}" text="{helper>customer}" />
+                    </m:ComboBox>
+
+                </template>
+            </Column>
+            <Column width="10rem">
+                <m:Label text="Req Delivery Date" />
+                <template>
+                    <m:DatePicker></m:DatePicker>
+                </template>
+            </Column>
+            <Column width="12rem">
+                <m:Label text="Delivery Date ATP" />
+                <template>
+                    <m:DatePicker></m:DatePicker>
+                </template>
+            </Column>
+            <Column width="12rem">
+                <m:Label text="Manual Price" />
+                <template>
+                    <m:Input id="Manual_Price" />
+                </template>
+            </Column>
+            <Column width="7rem">
+                <m:Label text="CURR" />
+                <template>
+                    <m:Input id="CURR2" />
+                </template>
+            </Column>
+            <Column width="7rem">
+                <m:Label text="DISC%" />
+                <template>
+                    <m:Input id="DISC" />
+                </template>
+            </Column>
+            <Column>
+                <m:Label text="Delete" />
+                <template>
+                    <m:Button icon="sap-icon://delete" press=".onDeleteButtonPressed" visible="{oModel>visible}" />
+                </template>
+            </Column>
+
+            <Column>
+
+                <template>
+                    <RowAction>
+
+                        <items>
+                            <RowActionItem type="Navigation"></RowActionItem>
+                        </items>
+                    </RowAction>
+                </template>
+
+            </Column>
+
+
+        </columns>
+    </Table>
+    <m:FlexBox justifyContent="End">
+        <m:Button class="sapUiSmallMarginTop" text="Simulate" />
+    </m:FlexBox>
+
+
+</mvc:View>

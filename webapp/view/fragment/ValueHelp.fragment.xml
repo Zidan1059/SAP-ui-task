@@ -2,39 +2,39 @@
 
 
     <TableSelectDialog confirm=".onCloseDialog" cancel=".onCloseDialog" title="Select Customer" items="{
-            path : '/helpList'
+            path : 'helper>/helpList'
            
         }" search=".handleSearch">
 
         <ColumnListItem selected="{selected}">
             <cells>
 
-                <Text text="{customer}" />
-                <ObjectIdentifier title="{customerName}" />
-                <Text text="{email}" />
-                <Text text="{mobile}" />
+                <Text text="{helper>customerName}" />
+                <ObjectIdentifier title="{helper>customer}" />
+                <Text text="{helper>email}" />
+                <Text text="{helper>mobile}" />
 
             </cells>
         </ColumnListItem>
         <columns>
             <Column>
                 <header>
-                    <Text text="{i18n>customer}" />
+                    <Text text="Customer Name" />
                 </header>
             </Column>
             <Column>
                 <header>
-                    <Text text="{i18n>formcustomername}" />
+                    <Text text="ID" />
                 </header>
             </Column>
             <Column>
                 <header>
-                    <Text text="{i18n>email}" />
+                    <Text text="Email" />
                 </header>
             </Column>
             <Column>
                 <header>
-                    <Text text="{i18n>mobile}" />
+                    <Text text="Mobile" />
                 </header>
             </Column>
         </columns>

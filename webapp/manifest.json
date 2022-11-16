@@ -26,7 +26,8 @@
         },
         "dependencies": {
             "libs": {
-                "sap.m": {}
+                "sap.m": {},
+                "sap.uxap": {}
             }
         },
         "routing": {
@@ -64,6 +65,18 @@
                     "supportedLocales": [""],
                     "fallbackLocale": ""
                 }
+            },
+            "product": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "Products.json"
+            },
+            "helper": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "helper.json"
+            },
+            "shipto": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "shipto.json"
             }
         }
     }

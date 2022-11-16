@@ -1,0 +1,48 @@
+{
+    "shipList": [
+        {
+            "shipTo": "1",
+            "carrier": "1",
+            "adress": "USA",
+            "adressLine1": "20/B, Modan Saha Lane",
+            "adressLine2": "Sutrapur",
+            "postCode": "1100",
+            "postOffice": "Dhaka Sadar",
+            "district": "Dhaka",
+            "country": "Bangladesh"
+        },
+        {
+            "shipTo": "2",
+            "carrier": "2",
+            "adress": "India",
+            "adressLine1": "Banasree",
+            "adressLine2": "Main Road",
+            "postCode": "1200",
+            "postOffice": "Rampura",
+            "district": "Dhaka",
+            "country": "Bangladesh"
+        },
+        {
+            "shipTo": "3",
+            "carrier": "3",
+            "adress": "Pakistan",
+            "adressLine1": "Uttara",
+            "adressLine2": "Airport Road",
+            "postCode": "1300",
+            "postOffice": "Uttara",
+            "district": "Dhaka",
+            "country": "Bangladesh"
+        },
+        {
+            "shipTo": "4",
+            "carrier": "4",
+            "adress": "England",
+            "adressLine1": "Khilgoan",
+            "adressLine2": "Taltola",
+            "postCode": "1400",
+            "postOffice": "Khilgoan",
+            "district": "Dhaka",
+            "country": "Bangladesh"
+        }
+    ]
+}

@@ -1,9 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.uxap"
-    xmlns:layout="sap.ui.layout"
-    xmlns:m="sap.m"
-    xmlns:header="sap.ui.task.SharedBlocks.header"
-    xmlns:items="sap.ui.task.SharedBlocks.items"
     controllerName="sap.ui.task.controller.Main"
 >
     <ObjectPageLayout id="ObjectPageLayout"
@@ -18,18 +14,20 @@
                 <subSections>
                     <ObjectPageSubSection id="headerSectionSS1">
                         <blocks>
-                            <header:HeaderBlock id="headerblock" />
+                            <mvc:XMLView id="headerView"
+                                viewName="sap.ui.task.view.HeaderBlock" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
 
 
-            <ObjectPageSection titleUppercase="false" id="employmentSection" title="Employment">
+            <ObjectPageSection titleUppercase="false" id="employmentSection" title="Items">
                 <subSections>
                     <ObjectPageSubSection id="itemsSectionSSsss1">
                         <blocks>
-                            <items:ItemsBlock id="itemsblock" />
+                            <mvc:XMLView id="itemView"
+                                viewName="sap.ui.task.view.ItemsBlock" />
                         </blocks>
                     </ObjectPageSubSection>
                 </subSections>
